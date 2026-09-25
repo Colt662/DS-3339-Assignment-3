@@ -29,6 +29,7 @@ class Stack:
             old_top = self.top
             self.top = self.top.next
             return old_top.value
+        
         else:
             return None
 
@@ -36,6 +37,7 @@ class Stack:
     def peek(self):
         if self.top != None:
             return self.top.value
+        
         else:
             return None
 
@@ -68,13 +70,15 @@ def run_undo_redo():
         print("5. View Redo Stack")
         print("6. Exit")
         choice = input("Select an option: ")
+        
+        print("")#extra line for spacing
 
         if choice == "1":
             action = input("Describe the action (e.g., Insert 'a'): ")
             # Push the action onto the undo stack and clear the redo stack
             undo_stack.push(action)
             redo_stack = Stack()
-            print(f'\nAction performed: {action}')
+            print(f'Action performed: {action}')
             
 
         elif choice == "2":
@@ -82,7 +86,7 @@ def run_undo_redo():
             action = undo_stack.pop()
             if action != None:
                 redo_stack.push(action)
-                print(f'\nUndid Action: {action}')
+                print(f'Undid Action: {action}')
 
             else:
                 print("No Actions to Undo")
@@ -93,7 +97,7 @@ def run_undo_redo():
             action = redo_stack.pop()
             if action != None:
                 undo_stack.push(action)
-                print(f'\nRedid Action: {action}')
+                print(f'Redid Action: {action}')
 
             else:
                 print("No Actions to Redo")
@@ -101,13 +105,13 @@ def run_undo_redo():
 
         elif choice == "4":
             # Print the undo stack
-            print("\nUndo Stack:")
+            print("Undo Stack:")
             undo_stack.print_stack()
             
             
         elif choice == "5":
             # Print the redo stack
-            print("\nRedo Stack:")
+            print("Redo Stack:")
             redo_stack.print_stack()
             
             
