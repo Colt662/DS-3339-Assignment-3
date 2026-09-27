@@ -6,12 +6,12 @@ class Stack:
     '''
         A class representing a stack of nodes.
         Attributes:
-            top (Node or None): The node on the top of the stack.
+            top (Node or None): The Node on the top of the stack.
         Methods:
-            push(value): Adds a new Node with the provided value to the top of the stack.
-            pop(): Removes the Node at the top of the stack and returns the value, or None if Stack is empty.
-            peek(): Returns the value of the Node on the top without removing it, or returns None if Stack is empty.
-            print_stack(): Prints out the current stack contents.
+            push(value): Adds the provided value to the top of the stack.
+            pop(): Removes and returns the value at the top of the stack, or returns None if Stack is empty.
+            peek(): Returns the value on the top of the Stack without removing it, or returns None if Stack is empty.
+            print_stack(): Prints out the current Stack contents.
     '''
 
     def __init__(self):
