@@ -1,5 +1,13 @@
 # Undo/Redo and Ticketing Line Systems
 
+## Origin
+
+This project was made for a Data Strucutres class and is intended to showcase the use of stacks and queues.
+
+A design memo is contained in [Design_Memo.txt](Design_Memo.txt).
+
+## Original Instructions 
+
 You've joined the internal tools team at a productivity software company. Two internal teams are requesting features for their systems: one team needs an Undo/Redo manager for a collaborative editor, and the other needs a Help Desk ticketing system to manage customer requests in the order they’re received.
 
 Instead of relying on built-in lists or Python's deque, you're tasked with building two custom data structures, **a Stack and a Queue**, using nodes and pointers. Your program should run in the terminal and allow users to:
