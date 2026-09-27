@@ -54,14 +54,15 @@ class Queue:
                 current_node = current_node.next
 
         else:
-            print("Queue is Empty")
+            print(" - Queue is Empty")
 
 
-def run_help_desk():
-    # Create an instance of the Queue class
     
+def run_help_desk():
+    help_desk_queue = Queue()
 
-    while True:
+    choice = ""
+    while choice != "5":
         print("\n--- Help Desk Ticketing System ---")
         print("1. Add customer")
         print("2. Help next customer")
@@ -69,26 +70,39 @@ def run_help_desk():
         print("4. View all waiting customers")
         print("5. Exit")
         choice = input("Select an option: ")
+        print()#extra line for spacing
 
         if choice == "1":
             name = input("Enter customer name: ")
             # Add the customer to the queue
-            
-            
-            print(f"{name} added to the queue.")
+            help_desk_queue.enqueue(name)
+            print(f'{name} added to the queue.')
+
+
         elif choice == "2":
             # Help the next customer in the queue and return message that they were helped
-            pass # delete this line
+            name = help_desk_queue.dequeue()
+            if name != None:
+                print(f'{name} was helped.')
+
+            else:
+                print("No customer was in the queue")
 
 
         elif choice == "3":
             # Peek at the next customer in the queue and return their name
-            pass # delete this line
+            name = help_desk_queue.peek()
+            if name != None:
+                print(f'{name} is in the queue.')
+
+            else:
+                print("Queue is empty")
 
 
         elif choice == "4":
             # Print all customers in the queue
             print("\nWaiting customers:")
+            help_desk_queue.print_queue()
             
 
         elif choice == "5":
