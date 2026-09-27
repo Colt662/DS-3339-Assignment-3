@@ -1,7 +1,5 @@
-# Import the Node class you created in node.py
 from node import Node
 
-# Implement your Stack class here
 class Stack:
     '''
         A class representing a stack of nodes.
@@ -70,7 +68,7 @@ def run_undo_redo():
         print("5. View Redo Stack")
         print("6. Exit")
         choice = input("Select an option: ")
-        
+
         print("")#extra line for spacing
 
         if choice == "1":
